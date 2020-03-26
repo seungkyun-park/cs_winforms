@@ -11,5 +11,8 @@ namespace F5074.MyBatisDataMapper.Service.School
         public string NAME { get; set; }
         public string LOCATION { get; set; }
         public string GRADE { get; set; }
+        public string Message { get; set; }
+        
+        public bool isSuccess { get; set; }
     }
 }

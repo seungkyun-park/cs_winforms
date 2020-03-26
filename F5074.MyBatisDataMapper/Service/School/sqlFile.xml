@@ -14,5 +14,29 @@
       
        ]]>
     </statement>
+    <insert id="InsertSchool" parameterClass="SchoolDTO">
+      INSERT INTO School (
+      NAME
+      , LOCATION
+      , GRADE
+      )
+      VALUES (
+      #NAME#
+      , #LOCATION#
+      , #GRADE#
+      )
+    </insert>
+
+    <statement id="UpdateSchool" parameterClass="SchoolDTO">
+      UPDATE School
+      SET LOCATION = #LOCATION#
+      , GRADE = #GRADE#
+      WHERE name = #NAME#
+    </statement>
+
+    <statement id="DeleteSchool" parameterClass="SchoolDTO">
+      DELETE FROM School
+      WHERE name = #NAME#
+    </statement>
   </statements>
 </sqlMap>

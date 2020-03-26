@@ -17,6 +17,46 @@ namespace F5074.Winforms.MyForm.DBConnect
         {
             InitializeComponent();
             button1.Click += Button1_Click;
+            button4.Click += Button4_Click;
+            button2.Click += Button2_Click;
+            button3.Click += Button3_Click;
+        }
+
+
+        //추가
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            SchoolDTO tempDTO = new SchoolDTO();
+            tempDTO.NAME = textBox1.Text;
+            tempDTO.LOCATION = textBox2.Text;
+            tempDTO.GRADE = textBox3.Text;
+            SchoolDTO resultDTO = SchoolDAO.InsertSchool(tempDTO);
+            MessageBox.Show(resultDTO.isSuccess.ToString());
+            Refresh();
+        }
+
+        //삭제
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            SchoolDTO tempDTO = new SchoolDTO();
+            tempDTO.NAME = textBox1.Text;
+            tempDTO.LOCATION = textBox2.Text;
+            tempDTO.GRADE = textBox3.Text;
+            SchoolDTO resultDTO = SchoolDAO.DeleteSchool(tempDTO);
+            MessageBox.Show(resultDTO.isSuccess.ToString());
+            Refresh();
+        }
+
+        //수정
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            SchoolDTO tempDTO = new SchoolDTO();
+            tempDTO.NAME = textBox1.Text;
+            tempDTO.LOCATION = textBox2.Text;
+            tempDTO.GRADE = textBox3.Text;
+            SchoolDTO resultDTO = SchoolDAO.UpdateSchool(tempDTO);
+            MessageBox.Show(resultDTO.isSuccess.ToString());
+            Refresh();
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -35,5 +75,6 @@ namespace F5074.Winforms.MyForm.DBConnect
             textBox2.Text = resultList[e.RowIndex].LOCATION;
             textBox3.Text = resultList[e.RowIndex].GRADE;
         }
+
     }
 }
