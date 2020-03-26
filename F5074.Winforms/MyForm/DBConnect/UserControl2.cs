@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using F5074.MyBatisDataMapper.Service.Dashboard;
+using F5074.MyBatisDataMapper.Service.School;
 
 namespace F5074.Winforms.MyForm.DBConnect
 {
@@ -23,6 +24,8 @@ namespace F5074.Winforms.MyForm.DBConnect
         private void Button1_Click(object sender, EventArgs e)
         {
             IList<DashboardDTO> resultList = DashboardDAO.SelectList(new DashboardDTO());
+
+            IList<SchoolDTO> resultList2 = SchoolDAO.SelectSchoolList(new SchoolDTO());
             //MessageBox.Show(resultList[0].NAME);
             //textBox1.Text = resultList[0].NAME;
             //textBox2.Text = resultList[0].AGE;
