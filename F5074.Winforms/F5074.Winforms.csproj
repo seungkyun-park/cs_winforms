@@ -71,6 +71,18 @@
     <Compile Include="MyForm\C_WebClient\MyWebClient01.Designer.cs">
       <DependentUpon>MyWebClient01.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyForm\DBConnect\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\DBConnect\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\DBConnect\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyForm\DBConnect\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyForm\D_Common\MyEnum01.cs">
       <SubType>UserControl</SubType>
     </Compile>
