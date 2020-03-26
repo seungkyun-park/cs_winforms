@@ -5,7 +5,15 @@
   </alias>
   <statements>
     <statement id="SelectList" parameterClass="DashboardDTO" resultClass="DashboardDTO">
-      SELECT 'aa' NAME
+      <![CDATA[
+      SELECT NAME
+      , AGE
+      , DEPT
+      FROM company
+      WHERE 1 = 1
+      -- 	AND NAME = '허보미'
+       AND DEPT = 'R&D'
+       ]]>
     </statement>
   </statements>
 </sqlMap>

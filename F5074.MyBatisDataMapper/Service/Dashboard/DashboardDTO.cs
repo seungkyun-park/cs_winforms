@@ -9,5 +9,7 @@ namespace F5074.MyBatisDataMapper.Service.Dashboard
     public class DashboardDTO
     {
         public string NAME { get; set; }
+        public string AGE { get; set; }
+        public string DEPT { get; set; }
     }
 }
