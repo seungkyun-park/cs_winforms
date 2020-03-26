@@ -19,13 +19,59 @@ namespace F5074.Winforms.MyForm.DBConnect
         {
             InitializeComponent();
             button1.Click += Button1_Click;
+            button2.Click += Button2_Click;
+            button3.Click += Button3_Click;
+            button4.Click += Button4_Click;
+        }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            DashboardDTO tempDTO = new DashboardDTO();
+            tempDTO.NAME = textBox1.Text;
+            tempDTO.AGE = textBox2.Text;
+            tempDTO.DEPT = textBox3.Text;
+            DashboardDTO resultDTO = DashboardDAO.DeleteCompany(tempDTO);
+            MessageBox.Show(resultDTO.isSuccess.ToString());
+
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+
+            DashboardDTO tempDTO = new DashboardDTO();
+            tempDTO.NAME = textBox1.Text;
+            tempDTO.AGE = textBox2.Text;
+            tempDTO.DEPT = textBox3.Text;
+            DashboardDTO resultDTO = DashboardDAO.UpdateCompany(tempDTO);
+            MessageBox.Show(resultDTO.isSuccess.ToString());
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            DashboardDTO tempDTO = new DashboardDTO();
+            tempDTO.NAME = textBox1.Text;
+            tempDTO.AGE = textBox2.Text;
+            tempDTO.DEPT = textBox3.Text;
+            DashboardDTO resultDTO = DashboardDAO.InsertCompany(tempDTO);
+            MessageBox.Show(resultDTO.isSuccess.ToString());
+
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            IList<DashboardDTO> resultList = DashboardDAO.SelectList(new DashboardDTO());
+            //1
+            DashboardDTO tempDTO = new DashboardDTO();
+            if(!String.IsNullOrWhiteSpace(textBox4.Text)) tempDTO.NAME = textBox4.Text;
 
-            IList<SchoolDTO> resultList2 = SchoolDAO.SelectSchoolList(new SchoolDTO());
+
+
+            IList<DashboardDTO> resultList = DashboardDAO.SelectList(tempDTO);
+
+
+            // 2
+            //IList<DashboardDTO> resultList2 = DashboardDAO.SelectList(new DashboardDTO() { NAME = textBox4.Text });
+
+
             //MessageBox.Show(resultList[0].NAME);
             //textBox1.Text = resultList[0].NAME;
             //textBox2.Text = resultList[0].AGE;

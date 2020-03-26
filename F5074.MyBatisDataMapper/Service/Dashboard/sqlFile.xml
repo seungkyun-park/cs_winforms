@@ -11,9 +11,32 @@
       , DEPT
       FROM company
       WHERE 1 = 1
-      -- 	AND NAME = '허보미'
-       AND DEPT = 'R&D'
        ]]>
+      <!--AND NAME = #NAME#-->
+    </statement>
+    <insert id="InsertCompany" parameterClass="DashboardDTO">
+      INSERT INTO company (
+      NAME
+      , AGE
+      , DEPT
+      )
+      VALUES (
+      #NAME#
+      , #AGE#
+      , #DEPT#
+      )
+    </insert>
+
+    <statement id="UpdateCompany" parameterClass="DashboardDTO">
+        UPDATE company
+        SET age = #AGE#
+        , dept = #DEPT#
+      WHERE name = #NAME#
+    </statement>
+
+    <statement id="DeleteCompany" parameterClass="DashboardDTO">
+      DELETE FROM company
+      WHERE name = #NAME#
     </statement>
   </statements>
 </sqlMap>
