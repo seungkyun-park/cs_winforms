@@ -5,9 +5,7 @@
   </alias>
   <statements>
     <statement id="SelectList" parameterClass="DashboardDTO" resultClass="DashboardDTO">
-      <!--SELECT IF_UT as Name
-        FROM METAL-->
-      SELECT 'aa' as  NAME FROM DUAL
+      SELECT 'aa' NAME
     </statement>
   </statements>
 </sqlMap>

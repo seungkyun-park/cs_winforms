@@ -1,6 +1,6 @@
 ﻿namespace F5074.Winforms.MyForm.DBConnect
 {
-    partial class UserControl1
+    partial class UserControl2
     {
         /// <summary> 
         /// 필수 디자이너 변수입니다.
@@ -28,43 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(192, 228);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(-15, -15);
+            this.textBox1.Location = new System.Drawing.Point(17, 17);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 21);
-            this.textBox1.TabIndex = 1;
+            this.textBox1.TabIndex = 0;
             // 
-            // maskedTextBox1
+            // textBox2
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(226, 107);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 21);
-            this.maskedTextBox1.TabIndex = 2;
+            this.textBox2.Location = new System.Drawing.Point(17, 44);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 21);
+            this.textBox2.TabIndex = 1;
             // 
-            // UserControl1
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(17, 71);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 21);
+            this.textBox3.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(17, 109);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 21);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // UserControl2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
-            this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(908, 504);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Name = "UserControl2";
+            this.Size = new System.Drawing.Size(389, 157);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -72,8 +81,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button button1;
     }
 }

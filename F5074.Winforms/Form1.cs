@@ -8,7 +8,8 @@ namespace F5074.Winforms
 {
     public partial class Form1 : Form
     {
-        private TreeNode[] treeNodeArray = { new TreeNode("MyCefSharp01"), new TreeNode("Form1"), new TreeNode("UserControl1") };
+        private TreeNode[] treeNodeArray = { new TreeNode("MyCefSharp01"), new TreeNode("Form1"), new TreeNode("UserControl1")
+        , new TreeNode("UserControl2")};
 
         private TabPage myTabPage;
 
@@ -53,6 +54,14 @@ namespace F5074.Winforms
                         this.tabControl1.SelectedIndex = this.tabControl1.TabPages.Count - 1;
                         break;
 
+                    case "UserControl2":
+
+                        myTabPage = new TabPage() { Name = this.treeView1.SelectedNode.Text, Text = this.treeView1.SelectedNode.Text };
+                        myTabPage.Controls.Add(new UserControl2() { Dock = DockStyle.Fill });
+                        tabControl1.TabPages.Add(myTabPage);
+                        this.tabControl1.SelectedTab = myTabPage;
+                        this.tabControl1.SelectedIndex = this.tabControl1.TabPages.Count - 1;
+                        break;
 
                 }
 
