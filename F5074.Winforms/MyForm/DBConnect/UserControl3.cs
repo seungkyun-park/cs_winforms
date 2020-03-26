@@ -33,6 +33,7 @@ namespace F5074.Winforms.MyForm.DBConnect
             SchoolDTO resultDTO = SchoolDAO.InsertSchool(tempDTO);
             MessageBox.Show(resultDTO.isSuccess.ToString());
             Refresh();
+            Console.WriteLine("Remote Commit Test");
         }
 
         //삭제
